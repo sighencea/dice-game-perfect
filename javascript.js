@@ -1,4 +1,6 @@
-function rollDiceAndDeclareWinner() {
+var overlay = document.getElementById('reroll-overlay');
+
+function performRollLogic() {
   var randomNumber1 = Math.floor(Math.random() * 6) + 1;
   var randomImageSource1 = "images/dice" + randomNumber1 + ".png";
   document.querySelectorAll("img")[0].setAttribute("src", randomImageSource1);
@@ -18,7 +20,27 @@ function rollDiceAndDeclareWinner() {
   }
 }
 
-var rollButton = document.getElementById("roll-button");
-rollButton.addEventListener("click", rollDiceAndDeclareWinner);
+function rollDiceAndDeclareWinner() {
+  performRollLogic();
+}
 
+function handleRollButtonClick() {
+  if (overlay) {
+    overlay.style.display = 'flex';
+  }
+
+  setTimeout(function() {
+    performRollLogic();
+    if (overlay) {
+      overlay.style.display = 'none';
+    }
+  }, 750);
+}
+
+var rollButton = document.getElementById("roll-button");
+if (rollButton) {
+  rollButton.addEventListener("click", handleRollButtonClick);
+}
+
+// Initial roll when the page loads
 rollDiceAndDeclareWinner();
