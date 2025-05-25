@@ -34,6 +34,12 @@ function handleRollButtonClick() {
 
   setTimeout(function() {
     performRollLogic();
+
+    // Change button text from "Roll Dice" to "Roll Again" after first roll
+    if (rollButton && rollButton.textContent === 'Roll Dice') {
+      rollButton.textContent = 'Roll Again';
+    }
+
     if (overlay) {
       overlay.style.display = 'none';
     }
@@ -46,4 +52,4 @@ if (rollButton) {
 }
 
 // Initial roll when the page loads
-rollDiceAndDeclareWinner();
+// rollDiceAndDeclareWinner();
