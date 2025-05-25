@@ -85,3 +85,17 @@ footer a:hover {
   font-family: 'Indie Flower', cursive;
   font-size: 3rem;
 }
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 5rem; /* Reduced font size for smaller screens */
+  }
+  .container {
+    width: 90%; /* Increased width for smaller screens */
+  }
+  .dice {
+    display: block; /* Stack dice vertically */
+    margin: 0 auto 30px auto; /* Center block and add bottom margin */
+  }
+}
