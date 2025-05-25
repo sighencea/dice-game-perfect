@@ -1,4 +1,7 @@
 var overlay = document.getElementById('reroll-overlay');
+if (overlay) {
+  overlay.style.display = 'none';
+}
 
 function performRollLogic() {
   var randomNumber1 = Math.floor(Math.random() * 6) + 1;
