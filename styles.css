@@ -37,7 +37,16 @@ footer {
   color: #EEEEEE;
   text-align: center;
   font-family: 'Indie Flower', cursive;
+  padding-bottom: 20px; /* Added bottom padding */
+}
 
+footer a {
+  color: #4ECCA3; /* Link color same as h1 and p */
+  text-decoration: none; /* Remove underline */
+}
+
+footer a:hover {
+  color: #5effbf; /* Brighter color on hover */
 }
 
 .dice-area {
