@@ -41,7 +41,6 @@ footer {
 }
 
 .dice-area {
-  position: relative;
   display: inline-block;
 }
 
@@ -60,7 +59,7 @@ footer {
 
 #reroll-overlay {
   display: none; /* Hidden by default, JS changes to flex to show */
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
