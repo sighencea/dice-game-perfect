@@ -34,7 +34,7 @@ function handleRollButtonClick() {
     if (overlay) {
       overlay.style.display = 'none';
     }
-  }, 750);
+  }, 2000);
 }
 
 var rollButton = document.getElementById("roll-button");

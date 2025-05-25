@@ -40,6 +40,11 @@ footer {
 
 }
 
+.dice-area {
+  position: relative;
+  display: inline-block;
+}
+
 #roll-button {
   display: block;
   margin: 30px auto;
@@ -54,15 +59,15 @@ footer {
 }
 
 #reroll-overlay {
-  display: none; /* Hidden by default */
-  position: fixed;
+  display: none; /* Hidden by default, JS changes to flex to show */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1000;
-  display: flex;
+  /* display: flex; /* This is removed, JS will set it to flex */
   align-items: center;
   justify-content: center;
 }
