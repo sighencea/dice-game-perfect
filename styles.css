@@ -50,7 +50,7 @@ footer {
 }
 
 footer a {
-  color: #4ECCA3; /* Link color same as h1 and p */
+  color: #FFFFFF; /* Changed link color to white */
   text-decoration: none; /* Remove underline */
 }
 
